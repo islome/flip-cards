@@ -11,6 +11,14 @@
             padding: 0;
             box-sizing: border-box;
         }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
         body {
             background: #0000 radial-gradient(circle,
                     rgba(146, 87, 32, 0.2) 0%,
@@ -18,6 +26,7 @@
                     rgba(166, 101, 101, 0.9) 100%);
             height: 100vh;
         }
+
         .wrapper {
             width: 100%;
             height: 100%;
@@ -59,7 +68,7 @@
 
         .card {
             position: absolute;
-            border: 2px solid rgba(var(--color-card));
+            /* border: 2px solid rgba(var(--color-card)); */
             border-radius: 12px;
             overflow: hidden;
             inset: 0;
@@ -75,6 +84,17 @@
                     rgba(var(--color-card), 0.6) 80%,
                     rgba(var(--color-card), 0.9) 100%);
         }
+
+        @media (max-width: 480px) {
+            .inner {
+                --w: 100px;
+                --h: 180px;
+                --translateZ: calc((var(--w) + var(--h)) + 0px);
+                --perspective: 700px;
+                top: 30%;
+                left: calc(50% - (var(--w) / 2));
+            }
+        }
     </style>
 </head>
 
@@ -82,34 +102,52 @@
     <div class="wrapper">
         <div class="inner" style="--quantity: 10;">
             <div class="card" style="--index: 0;--color-card: 142, 249, 252;">
-                <div class="img"></div>
+                <div class="img"><img
+                        src="https://images.unsplash.com/photo-1591824438708-ce405f36ba3d?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8YW5pbWFsc3xlbnwwfHwwfHx8MA%3D%3D"
+                        alt="404"></div>
             </div>
             <div class="card" style="--index: 1;--color-card: 142, 252, 204;">
-                <div class="img"></div>
+                <div class="img"><img src="https://i.pinimg.com/736x/26/6e/c1/266ec1b26b997f287ed21ef74d650589.jpg"
+                        alt="404"></div>
             </div>
             <div class="card" style="--index: 2;--color-card: 142, 252, 157;">
-                <div class="img"></div>
+                <div class="img"><img
+                        src="https://wallpapercat.com/w/full/8/1/6/1037012-2160x3840-iphone-4k-wild-animals-wallpaper-image.jpg"
+                        alt="404"></div>
             </div>
             <div class="card" style="--index: 3;--color-card: 215, 252, 142;">
-                <div class="img"></div>
+                <div class="img"><img src="https://i.pinimg.com/736x/0e/98/a2/0e98a2e6a543ddd47ed36cdd2f606b0e.jpg"
+                        alt="404"></div>
             </div>
             <div class="card" style="--index: 4;--color-card: 252, 252, 142;">
-                <div class="img"></div>
+                <div class="img"><img
+                        src="https://c1.wallpaperflare.com/preview/310/817/237/rhino-beast-wild-rhinoceros.jpg"
+                        alt="404"></div>
             </div>
             <div class="card" style="--index: 5;--color-card: 252, 208, 142;">
-                <div class="img"></div>
+                <div class="img"><img
+                        src="https://images.pexels.com/photos/572861/pexels-photo-572861.jpeg?cs=srgb&dl=pexels-richard-verbeek-177679-572861.jpg&fm=jpg"
+                        alt="404"></div>
             </div>
             <div class="card" style="--index: 6;--color-card: 252, 142, 142;">
-                <div class="img"></div>
+                <div class="img"><img
+                        src="https://media.baamboozle.com/uploads/images/740912/1652539367_1467559_gif-url.jpeg"
+                        alt="404"></div>
             </div>
             <div class="card" style="--index: 7;--color-card: 252, 142, 239;">
-                <div class="img"></div>
+                <div class="img"><img
+                        src="https://w0.peakpx.com/wallpaper/147/388/HD-wallpaper-hyena-grass-predators-hyenas-animal-wild-thumbnail.jpg"
+                        alt="404"></div>
             </div>
             <div class="card" style="--index: 8;--color-card: 204, 142, 252;">
-                <div class="img"></div>
+                <div class="img"><img
+                        src="https://www.bhmpics.com/downloads/rabbit-wallpapers-for-desktop-/50.pexels-photo-4001296.jpeg"
+                        alt="404"></div>
             </div>
             <div class="card" style="--index: 9;--color-card: 142, 202, 252;">
-                <div class="img"></div>
+                <div class="img"><img
+                        src="https://s1.1zoom.me/b4249/Birds_Common_Kingfisher_Bokeh_Branches_572145_169x300.jpg"
+                        alt="404"></div>
             </div>
         </div>
     </div>
